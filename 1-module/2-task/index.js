@@ -9,8 +9,16 @@ function print(text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
+
+// Необходимо, чтобы на сайте можно было поприветствовать только пользователей,
+// которые удовлетворяют следующему условию - *имя не пустое, без пробелов, минимум 4 символа*.
+
 function isValid(name) {
-  // ваш код...
+  let validName = name.trim();
+
+  if(validName.length >= 4 && validName.indexOf(' ') === -1) return true;
+
+  return false;
 }
 
 function sayHello() {
